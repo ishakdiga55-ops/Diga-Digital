@@ -7,10 +7,6 @@
 <meta name="description" content="Diga Scanner — جهاز Vgate iCar Pro OBD-II الأصلي. يكشف أكثر من 9530 عطل. توصيل لجميع الولايات والدفع عند الاستلام.">
 <meta name="theme-color" content="#ffffff">
 
-<meta property="og:title" content="Diga Scanner | جهاز كشف أعطال السيارة">
-<meta property="og:description" content="اكتشف أعطال سيارتك بنفسك في ثوانٍ. +9530 عطل مدعوم.">
-<meta property="og:type" content="website">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -22,19 +18,21 @@
   --primary-dark:#1e3a8a;
   --primary-light:#eff6ff;
   --accent:#f59e0b;
+  --accent-dark:#d97706;
   --green:#16a34a;
   --green-light:#f0fdf4;
+  --red:#dc2626;
   --text:#0f172a;
   --text-2:#334155;
   --muted:#64748b;
   --border:#e2e8f0;
   --bg:#ffffff;
   --bg-soft:#f8fafc;
-  --radius:12px;
-  --shadow-sm:0 1px 2px rgba(15,23,42,.05);
-  --shadow:0 4px 12px rgba(15,23,42,.07);
-  --shadow-lg:0 12px 32px rgba(15,23,42,.1);
-  --container:1160px;
+  --radius:14px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06);
+  --shadow:0 6px 18px rgba(15,23,42,.08);
+  --shadow-lg:0 20px 50px rgba(15,23,42,.12);
+  --container:1200px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -54,172 +52,290 @@ button,input,select,textarea{font-family:inherit;font-size:inherit}
 
 /* ═══════════ الشريط العلوي ═══════════ */
 .topbar{
-  background:var(--primary);
+  background:linear-gradient(90deg,var(--primary),var(--primary-dark));
   color:#fff;
   text-align:center;
-  padding:10px 16px;
-  font-size:.86rem;
+  padding:11px 16px;
+  font-size:.88rem;
   font-weight:600;
 }
-.topbar b{color:#fde68a}
+.topbar b{color:#fde68a;font-weight:800}
 
 /* ═══════════ الهيدر ═══════════ */
 header{
   position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--border);
 }
-.nav{
-  display:flex;align-items:center;justify-content:space-between;
-  height:68px;
-}
-.logo{
-  display:flex;align-items:center;gap:10px;
-  font-weight:900;font-size:1.15rem;
-  color:var(--text);
-}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.2rem;color:var(--text)}
 .logo-icon{
-  width:38px;height:38px;border-radius:10px;
-  background:var(--primary);
-  display:grid;place-items:center;
-  color:#fff;flex-shrink:0;
+  width:40px;height:40px;border-radius:11px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+  display:grid;place-items:center;color:#fff;flex-shrink:0;
+  box-shadow:0 4px 12px rgba(29,78,216,.3);
 }
 .logo-icon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .logo span{color:var(--primary)}
 
-.nav-links{display:flex;gap:6px;align-items:center;list-style:none}
-.nav-links a{
-  font-size:.92rem;font-weight:600;color:var(--text-2);
-  padding:8px 14px;border-radius:8px;
-  transition:all .2s;
-}
+.nav-links{display:flex;gap:4px;align-items:center;list-style:none}
+.nav-links a{font-size:.94rem;font-weight:600;color:var(--text-2);padding:8px 14px;border-radius:8px;transition:all .2s}
 .nav-links a:hover{color:var(--primary);background:var(--primary-light)}
 
 /* ═══════════ الأزرار ═══════════ */
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:13px 26px;border-radius:10px;
-  font-weight:700;font-size:.95rem;
-  border:none;cursor:pointer;
-  transition:all .2s;
-  white-space:nowrap;
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 28px;border-radius:11px;
+  font-weight:700;font-size:.96rem;
+  border:none;cursor:pointer;transition:all .25s;white-space:nowrap;
 }
 .btn-primary{
-  background:var(--primary);color:#fff;
-  box-shadow:0 2px 8px rgba(29,78,216,.25);
-}
-.btn-primary:hover{
-  background:var(--primary-dark);
-  transform:translateY(-1px);
+  background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+  color:#fff;
   box-shadow:0 4px 14px rgba(29,78,216,.35);
 }
-.btn-outline{
-  background:#fff;color:var(--text);
-  border:1.5px solid var(--border);
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(29,78,216,.45)}
+.btn-accent{
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  color:#fff;
+  box-shadow:0 4px 14px rgba(245,158,11,.4);
 }
-.btn-outline:hover{border-color:var(--primary);color:var(--primary)}
-.btn-large{padding:16px 34px;font-size:1.05rem}
+.btn-accent:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(245,158,11,.5)}
+.btn-outline{background:#fff;color:var(--text);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-light)}
+.btn-large{padding:17px 36px;font-size:1.05rem}
 
 .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .burger span{display:block;width:24px;height:2.5px;background:var(--text);margin:5px 0;border-radius:3px;transition:.3s}
 
-/* ═══════════ الهيرو ═══════════ */
+/* ═══════════ الهيرو الاحترافي ═══════════ */
 .hero{
-  padding:70px 0 80px;
-  background:linear-gradient(180deg,var(--bg-soft),#fff);
+  position:relative;
+  padding:60px 0 80px;
+  background:linear-gradient(180deg,#f8fafc 0%,#ffffff 100%);
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;
+(--  top:-200px;left:-200px;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(29,78,216,.08),transparent 70%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;
+  bottom:-250px;right:-150px;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(245,158,11,.06),transparent 70%);
+  pointer-events:none;
 }
 .hero-grid{
+  position:relative;z-index:2;
   display:grid;grid-template-columns:1fr 1fr;
   gap:60px;align-items:center;
 }
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--primary-light);
-  color:var(--primary);
-  padding:6px 14px;border-radius:50px;
-  font-size:.82rem;font-weight:700;
-  margin-bottom:20px;
-}
-.hero-badge::before{
-  content:'';width:8px;height:8px;border-radius:50%;
-  background:var(--green);
-}
-.hero h1{
-  font-size:clamp(1.9rem,4.2vw,2.9rem);
-  font-weight:900;line-height:1.3;
-  margin-bottom:18px;color:var(--text);
-}
-.hero h1 span{color:var(--primary)}
-.hero p.lead{
-  font-size:1.05rem;color:var(--text-2);
-  margin-bottom:30px;max-width:520px;
-}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
-.hero-points{
-  display:flex;flex-wrap:wrap;gap:20px;
-  padding-top:24px;border-top:1px solid var(--border);
-}
-.hero-points div{
-  display:flex;align-items:center;gap:8px;
-  font-size:.88rem;color:var(--text-2);font-weight:600;
-}
-.hero-points svg{width:18px;height:18px;stroke:var(--green);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 
-/* صورة المنتج */
-.product-image{
+/* قسم النص */
+.hero-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#fff;
+  border:1.5px solid var(--primary-light);
+  color:var(--primary);
+  padding:8px 18px;border-radius:50px;
+  font-size:.85rem;font-weight:700;
+  margin-bottom:24px;
+  box-shadow:0 3px 10px rgba(29,78,216,.08);
+}
+.hero-badge .dot{
+  width:9px;height:9px;border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 0 0 rgba(22,163,74,.5);
+  animation:pulseGreen 2s infinite;
+}
+@keyframes pulseGreen{
+  0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,.5)}
+  50%{box-shadow:0 0 0 8px rgba(22,163,74,0)}
+}
+
+.hero h1{
+  font-size:clamp(2rem,4.4vw,3rem);
+  font-weight:900;line-height:1.25;
+  margin-bottom:20px;color:var(--text);
+  letter-spacing:-.5px;
+}
+.hero h1 .highlight{
+  color:var(--primary);
+  position:relative;
+  display:inline-block;
+}
+.hero h1 .highlight::after{
+  content:'';position:absolute;
+  bottom:6px;right:0;left:0;height:10px;
+  background:rgba(245,158,11,.25);
+  z-index:-1;border-radius:4px;
+}
+.hero p.lead{
+  font-size:1.08rem;color:var(--text-2);
+  margin-bottom:26px;max-width:540px;
+  line-height:1.85;
+}
+.hero p.lead strong{color:var(--primary);font-weight:800}
+
+/* مميزات سريعة في الهيرو */
+.hero-quick{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:10px 20px;margin-bottom:32px;max-width:480px;
+}
+.hero-quick div{
+  display:flex;align-items:center;gap:9px;
+  font-size:.92rem;color:var(--text-2);font-weight:600;
+}
+.hero-quick svg{
+  width:20px;height:20px;flex-shrink:0;
+  stroke:var(--green);fill:none;stroke-width:2.8;
+  stroke-linecap:round;stroke-linejoin:round;
+  background:var(--green-light);
+  padding:3px;border-radius:50%;
+}
+
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+
+/* إشارات الثقة أسفل الأزرار */
+.hero-trust{
+  display:flex;gap:24px;flex-wrap:wrap;
+  padding-top:24px;
+  border-top:1px solid var(--border);
+}
+.hero-trust div{
+  display:flex;align-items:center;gap:8px;
+  font-size:.86rem;color:var(--muted);font-weight:600;
+}
+.hero-trust svg{
+  width:18px;height:18px;
+  stroke:var(--primary);fill:none;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
+  flex-shrink:0;
+}
+
+/* صورة المنتج في الهيرو */
+.hero-product{
+  position:relative;
+}
+.product-card{
   position:relative;
   background:#fff;
-  border-radius:20px;
-  padding:40px;
+  border-radius:24px;
+  padding:24px;
   box-shadow:var(--shadow-lg);
-  display:grid;place-items:center;
+  border:1px solid var(--border);
+  overflow:hidden;
 }
-.product-image::before{
-  content:'';position:absolute;inset:0;
-  border-radius:20px;
-  padding:1px;
-  background:linear-gradient(135deg,rgba(29,78,216,.2),transparent 60%);
-  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-  pointer-events:none;
+.product-card::before{
+  content:'';position:absolute;
+  top:0;right:0;left:0;height:4px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
 }
-.product-image svg{width:100%;max-width:280px}
+.product-card img{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  display:block;
+}
+
+/* شارة العرض */
+.product-offer-badge{
+  position:absolute;
+  top:36px;right:36px;
+  background:linear-gradient(135deg,var(--red),#b91c1c);
+  color:#fff;
+  padding:8px 16px;
+  border-radius:50px;
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.5px;
+  box-shadow:0 6px 20px rgba(220,38,38,.4);
+  z-index:3;
+  transform:rotate(-4deg);
+}
+
+/* بطاقة سعر سريعة تحت الصورة */
+.product-price-tag{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;
+  margin-top:20px;
+  padding:18px 22px;
+  background:linear-gradient(135deg,var(--primary-light),#fff);
+  border:1.5px solid var(--primary-light);
+  border-radius:14px;
+}
+.product-price-tag .label{
+  font-size:.86rem;color:var(--muted);font-weight:600;
+}
+.product-price-tag .price{
+  display:flex;align-items:baseline;gap:8px;
+}
+.product-price-tag .amount{
+  font-size:1.9rem;font-weight:900;color:var(--primary);
+  line-height:1;
+}
+.product-price-tag .cur{
+  font-size:.9rem;color:var(--muted);font-weight:700;
+}
+.product-price-tag .old{
+  color:var(--muted);text-decoration:line-through;
+  font-size:.86rem;font-weight:600;
+}
 
 /* ═══════════ شريط الثقة ═══════════ */
-.trust{
-  background:var(--bg-soft);
+.trust-strip{
+  background:#fff;
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
-  padding:30px 0;
+  padding:24px 0;
 }
 .trust-grid{
   display:grid;grid-template-columns:repeat(4,1fr);
-  gap:30px;text-align:center;
+  gap:20px;
 }
-.trust-item b{
-  display:block;font-size:1.7rem;font-weight:900;
-  color:var(--primary);line-height:1.2;
+.trust-item{
+  display:flex;align-items:center;gap:12px;
+  padding:8px 0;
 }
-.trust-item span{font-size:.86rem;color:var(--muted)}
+.trust-item .icon{
+  width:46px;height:46px;flex-shrink:0;
+  border-radius:12px;
+  background:var(--primary-light);
+  display:grid;place-items:center;
+}
+.trust-item .icon svg{
+  width:22px;height:22px;
+  stroke:var(--primary);fill:none;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
+}
+.trust-item b{display:block;font-size:1rem;font-weight:800;color:var(--text);line-height:1.3}
+.trust-item span{font-size:.82rem;color:var(--muted)}
 
-/* ═══════════ الأقسام ═══════════ */
+/* ═══════════ الأقسام العامة ═══════════ */
 section{padding:80px 0}
-.sec-head{text-align:center;max-width:640px;margin:0 auto 50px}
+.sec-head{text-align:center;max-width:660px;margin:0 auto 48px}
 .sec-tag{
   display:inline-block;
-  color:var(--primary);font-weight:700;
-  font-size:.85rem;margin-bottom:12px;
-  letter-spacing:.5px;
+  color:var(--primary);
+  background:var(--primary-light);
+  padding:5px 14px;border-radius:50px;
+  font-weight:700;font-size:.8rem;
+  margin-bottom:14px;letter-spacing:.3px;
 }
 .sec-head h2{
-  font-size:clamp(1.5rem,3.2vw,2.2rem);
+  font-size:clamp(1.6rem,3.4vw,2.3rem);
   font-weight:900;margin-bottom:14px;
   line-height:1.4;color:var(--text);
 }
-.sec-head p{color:var(--muted);font-size:1rem}
+.sec-head p{color:var(--muted);font-size:1.02rem}
 
 /* ═══════════ المميزات ═══════════ */
 .features{background:var(--bg-soft)}
@@ -237,81 +353,91 @@ section{padding:80px 0}
 }
 .feat:hover{
   box-shadow:var(--shadow);
-  transform:translateY(-3px);
+  transform:translateY(-4px);
   border-color:#cbd5e1;
 }
 .feat-icon{
-  width:52px;height:52px;border-radius:12px;
-  background:var(--primary-light);
-  display:grid;place-items:center;
-  margin-bottom:18px;
+  width:54px;height:54px;border-radius:13px;
+  background:linear-gradient(135deg,var(--primary-light),#dbeafe);
+  display:grid;place-items:center;margin-bottom:18px;
 }
 .feat-icon svg{
-  width:24px;height:24px;
-  stroke:var(--primary);fill:none;
-  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
-}
-.feat h3{font-size:1.05rem;font-weight:800;margin-bottom:8px;color:var(--text)}
-.feat p{color:var(--muted);font-size:.92rem;line-height:1.8}
+  width:26px;height:26radiuspx;
+  stroke:var(--primary);fill:none);
+;
+  stroke-width:2;stroke-linecap :round;stroke-linejoin:round;
+ padding}
+.feat h3{font-size::1.08rem;font-weight:800;margin-bottom:9px;color:var(--text)}
+.feat p{color:var(--muted);font-size:.93rem;line-height:1.8}
 
 /* ═══════════ كيف يعمل ═══════════ */
 .steps{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:30px;
+  gap:28px;
 }
-.step{
-  text-align:center;
-  padding:24px 16px;
-}
+.step{text-align:center;padding:22px 16px;position:relative}
 .step-num{
-  width:64px;height:64px;border-radius:50%;
-  background:var(--primary);
-  color:#fff;font-weight:900;font-size:1.5rem;
-  display:grid;place-items:center;
-  margin:0 auto 20px;
-  box-shadow:0 6px 20px rgba(29,78,216,.3);
+  width:70px;height:70px;border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+  color:#fff;font-weight:900;font-size:1.6rem;
+  display:grid;place-items:center;margin:0 auto 20px;
+  box-shadow:0 8px 24px rgba(29,78,216,.35);
+  position:relative;
 }
-.step h3{font-size:1.05rem;font-weight:800;margin-bottom:10px}
-.step p{color:var(--muted);font-size:.92rem}
+.step-num::after{
+  content:'';position:absolute;inset:-6px;
+  border-radius:50%;
+  border:2px dashed var(--primary-light);
+}
+.step h3{font-size:1.08rem;font-weight:800;margin-bottom:9px}
+.step p{color:var(--muted);font-size:.93rem}
 
 /* ═══════════ المواصفات ═══════════ */
 .specs{background:var(--bg-soft)}
 .specs-grid{
   display:grid;grid-template-columns:1fr 1fr;
-  gap:50px;align-items:center;
+  gap:48px;align-items:center;
 }
-.spec-list{list-style:none;display:grid;gap:12px}
+.spec-list{list-style:none;display:grid;gap:11px}
 .spec-list li{
   display:flex;gap:12px;align-items:flex-start;
   background:#fff;border:1px solid var(--border);
-  padding:14px 18px;border-radius:10px;
+  padding:15px 18px;border-radius:11px;
   font-size:.94rem;color:var(--text-2);
+  transition:.2s;
 }
+.spec-list li:hover{border-color:var(--primary);transform:translateX(-4px)}
 .spec-list li svg{
-  width:20px;height:20px;flex-shrink:0;margin-top:4px;
-  stroke:var(--green);fill:none;stroke-width:2.5;
+  width:21px;height:21px;flex-shrink:0;margin-top:4px;
+  stroke:var(--green);fill:none;stroke-width:2.8;
   stroke-linecap:round;stroke-linejoin:round;
 }
 
 .spec-box{
   background:#fff;
   border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:30px;
+  border-radius:var32px;
   box-shadow:var(--shadow-sm);
+  position:relative;
+  overflow:hidden;
+}
+.spec-box::before{
+  content:'';position:absolute;
+  top:0;right:0;left:0;height:3px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
 }
 .spec-box h3{
   font-size:1.15rem;font-weight:800;
-  margin-bottom:18px;color:var(--text);
-  padding-bottom:14px;
+  margin-bottom:20px;color:var(--text);
+  padding-bottom:16px;
   border-bottom:1px solid var(--border);
 }
 .spec-row{
   display:flex;justify-content:space-between;gap:16px;
-  padding:12px 0;
+  padding:13px 0;
   border-bottom:1px dashed var(--border);
-  font-size:.92rem;
+  font-size:.93rem;
 }
 .spec-row:last-child{border-bottom:none}
 .spec-row span:first-child{color:var(--muted)}
@@ -319,121 +445,82 @@ section{padding:80px 0}
 
 /* ═══════════ السعر ═══════════ */
 .price-card{
-  max-width:560px;margin:0 auto;
+  max-width:580px;margin:0 auto;
   background:#fff;
   border:2px solid var(--primary);
-  border-radius:20px;
-  padding:44px 36px;
+  border-radius:22px;
+  padding:46px 38px;
   box-shadow:var(--shadow-lg);
   position:relative;
   text-align:center;
+  overflow:hidden;
+}
+.price-card::before{
+  content:'';position:absolute;
+  top:0;right:0;left:0;height:5px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
 }
 .price-tag{
-  position:absolute;top:-14px;right:50%;
-  transform:translateX(50%);
-  background:var(--accent);
-  color:#fff;font-size:.78rem;font-weight:800;
-  padding:6px 20px;border-radius:50px;
+  position:absolute;top:20px;left:20px;
+  background:linear-gradient(135deg,var(--red),#b91c1c);
+  color:#fff;font-size:.75rem;font-weight:800;
+  padding:6px 14px;border-radius:50px;
   letter-spacing:.5px;
+  box-shadow:0 4px 12px rgba(220,38,38,.35);
 }
-.price-card h3{
-  font-size:1.25rem;font-weight:900;
-  margin-bottom:6px;color:var(--text);
-}
-.price-card .desc{
-  color:var(--muted);font-size:.9rem;margin-bottom:26px;
-}
+.price-card h3{font-size:1.4rem;font-weight:900;margin-bottom:6px;color:var(--text)}
+.price-card .desc{color:var(--muted);font-size:.92rem;margin-bottom:26px}
 .price-amount{
   display:flex;align-items:baseline;justify-content:center;
   gap:10px;margin-bottom:6px;
 }
-.price-amount .num{
-  font-size:3.4rem;font-weight:900;
-  color:var(--primary);line-height:1;
-}
-.price-amount .cur{font-size:1.1rem;color:var(--muted);font-weight:700}
+.price-amount .num{font-size:3.6rem;font-weight:900;color:var(--primary);line-height:1}
+.price-amount .cur{font-size:1.15rem;color:var(--muted);font-weight:700}
 .price-old{
   color:var(--muted);text-decoration:line-through;
-  font-size:1.05rem;font-weight:600;
-  margin-bottom:26px;
+  font-size:1.1rem;font-weight:600;
+  margin-bottom:28px;
 }
 .price-feats{
   list-style:none;text-align:right;
   display:grid;gap:12px;
-  padding:24px 0;
+  padding:26px 0;
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
-  margin-bottom:26px;
+  margin-bottom:28px;
 }
 .price-feats li{
-  display:flex;gap:10px;font-size:.92rem;
+  display:flex;gap:11px;font-size:.94rem;
   color:var(--text-2);align-items:flex-start;
 }
 .price-feats li svg{
-  width:18px;height:18px;flex-shrink:0;margin-top:5px;
+  width:19px;height:19px;flex-shrink:0;margin-top:4px;
   stroke:var(--green);fill:none;stroke-width:3;
   stroke-linecap:round;stroke-linejoin:round;
 }
-.price-card .btn{width:100%}
+.price-card .btn{width:100%;padding:18px;font-size:1.05rem}
 .price-note{
-  margin-top:16px;font-size:.82rem;
-  color:var(--muted);
-  display:flex;align-items:center;justify-content:center;gap:6px;
+  margin-top:16px;font-size:.84rem;color:var(--muted);
+  display:flex;align-items:center;justify-content:center;gap:7px;
 }
-.price-note svg{width:14px;height:14px;stroke:var(--green);fill:none;stroke-width:2.5}
-
-/* ═══════════ آراء العملاء ═══════════ */
-.reviews{background:var(--bg-soft)}
-.rev-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:22px;
-}
-.rev{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:26px 24px;
-  transition:.25s;
-}
-.rev:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-.stars{
-  color:var(--accent);font-size:1rem;
-  letter-spacing:2px;margin-bottom:14px;
-}
-.rev p{
-  color:var(--text-2);font-size:.93rem;
-  line-height:1.85;margin-bottom:20px;
-}
-.rev-author{
-  display:flex;align-items:center;gap:12px;
-  padding-top:16px;border-top:1px solid var(--border);
-}
-.avatar{
-  width:44px;height:44px;border-radius:50%;
-  background:var(--primary);color:#fff;
-  display:grid;place-items:center;
-  font-weight:800;font-size:1rem;flex-shrink:0;
-}
-.rev-author b{display:block;font-size:.92rem;color:var(--text)}
-.rev-author span{font-size:.8rem;color:var(--muted)}
+.price-note svg{width:15px;height:15px;stroke:var(--green);fill:none;stroke-width:2.5}
 
 /* ═══════════ FAQ ═══════════ */
-.faq-wrap{max-width:780px;margin:0 auto}
+.faq-wrap{max-width:800px;margin:0 auto}
 details{
   background:#fff;
   border:1px solid var(--border);
-  border-radius:var(--radius);
+  border-radius:13px;
   margin-bottom:12px;
-  transition:.2s;
+  transition:.25s;
 }
 details[open]{
   border-color:var(--primary);
-  box-shadow:var(--shadow-sm);
+  box-shadow:0 6px 20px rgba(29,78,216,.1);
 }
 summary{
   padding:20px 24px;cursor:pointer;
-  font-weight:700;font-size:.98rem;
+  font-weight:700;font-size:1rem;
   list-style:none;
   display:flex;justify-content:space-between;
   align-items:center;gap:16px;
@@ -441,173 +528,152 @@ summary{
 }
 summary::-webkit-details-marker{display:none}
 summary::after{
-  content:'+';font-size:1.4rem;
+  content:'+';font-size:1.5rem;
   color:var(--primary);font-weight:400;
   transition:transform .25s;line-height:1;
 }
 details[open] summary::after{transform:rotate(45deg)}
 details p{
-  padding:0 24px 20px;
-  color:var(--muted);font-size:.92rem;
-  line-height:1.85;
+  padding:0 24px 22px;
+  color:var(--muted);font-size:.94rem;
+  line-height:1.9;
 }
 
 /* ═══════════ نموذج الطلب ═══════════ */
 .order{background:var(--bg-soft)}
 .order-box{
-  max-width:680px;margin:0 auto;
+  max-width:700px;margin:0 auto;
   background:#fff;
   border:1px solid var(--border);
-  border-radius:16px;
-  padding:40px 34px;
+  border-radius:20px;
+  padding:44px 36px;
   box-shadow:var(--shadow);
 }
-.form-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-.field{margin-bottom:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:20px}
 .field label{
-  display:block;font-size:.88rem;
-  font-weight:700;margin-bottom:8px;
+  display:block;font-size:.9rem;
+  font-weight:700;margin-bottom:9px;
   color:var(--text);
 }
-.field label .req{color:#dc2626}
+.field label .req{color:var(--red)}
 .field input,.field select,.field textarea{
-  width:100%;padding:13px 16px;
+  width:100%;padding:14px 16px;
   background:#fff;
   border:1.5px solid var(--border);
-  border-radius:10px;
-  color:var(--text);font-size:.94rem;
+  border-radius:11px;
+  color:var(--text);font-size:.95rem;
   transition:.2s;outline:none;
 }
 .field input:focus,.field select:focus,.field textarea:focus{
   border-color:var(--primary);
-  box-shadow:0 0 0 3px rgba(29,78,216,.12);
+  box-shadow:0 0 0 4px rgba(29,78,216,.1);
 }
 .field input::placeholder,.field textarea::placeholder{color:#94a3b8}
 .field select{
   appearance:none;cursor:pointer;
   background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
   background-repeat:no-repeat;
-  background-position:left 14px center;
+  background-position:left 16px center;
   background-size:18px;
 }
 .field textarea{resize:vertical;min-height:90px}
-.order-box .btn{width:100%;padding:16px;font-size:1rem;margin-top:6px}
+.order-box .btn{width:100%;padding:18px;font-size:1.05rem;margin-top:8px}
 .form-note{
-  text-align:center;font-size:.82rem;
-  color:var(--muted);margin-top:14px;
+  text-align:center;font-size:.85rem;
+  color:var(--muted);margin-top:16px;
 }
 
 /* ═══════════ الفوتر ═══════════ */
-footer{
-  background:#0f172a;
-  color:#cbd5e1;
-  padding:56px 0 24px;
-}
+footer{background:#0f172a;color:#cbd5e1;padding:56px 0 24px}
 .foot-grid{
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr 1.2fr;
-  gap:40px;margin-bottom:40px;
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;
+  gap:44px;margin-bottom:40px;
 }
 .foot-brand .logo{color:#fff;margin-bottom:16px}
 .foot-brand .logo span{color:#60a5fa}
 .foot-brand .logo-icon{background:#1d4ed8}
-.foot-brand p{
-  color:#94a3b8;font-size:.9rem;
-  margin-bottom:18px;max-width:300px;
-}
-footer h4{
-  color:#fff;font-size:.95rem;
-  font-weight:800;margin-bottom:18px;
-}
+.foot-brand p{color:#94a3b8;font-size:.9rem;margin-bottom:18px;max-width:310px}
+footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
 .foot-links{list-style:none;display:grid;gap:11px}
-.foot-links a{
-  color:#94a3b8;font-size:.9rem;
-  transition:.2s;
-}
+.foot-links a{color:#94a3b8;font-size:.9rem;transition:.2s}
 .foot-links a:hover{color:#60a5fa}
 .foot-contact{list-style:none}
 .foot-contact li{
-  display:flex;gap:10px;
-  color:#94a3b8;font-size:.88rem;
-  margin-bottom:12px;align-items:flex-start;
+  display:flex;gap:11px;color:#94a3b8;
+  font-size:.89rem;margin-bottom:13px;align-items:flex-start;
 }
 .foot-contact svg{
-  width:16px;height:16px;
-  stroke:#60a5fa;fill:none;
+  width:17px;height:17px;stroke:#60a5fa;fill:none;
   stroke-width:2;flex-shrink:0;margin-top:6px;
 }
 .foot-contact a{color:#94a3b8;transition:.2s}
 .foot-contact a:hover{color:#60a5fa}
 .copyright{
   border-top:1px solid #1e293b;
-  padding-top:22px;text-align:center;
-  color:#64748b;font-size:.85rem;
+  padding-top:24px;text-align:center;
+  color:#64748b;font-size:.86rem;
 }
 .copyright b{color:#60a5fa}
 
-/* ═══════════ زر واتساب ═══════════ */
+/* ═══════════ زر واتساب عائم ═══════════ */
 .float-wa{
-  position:fixed;bottom:24px;left:24px;z-index:999;
-  width:56px;height:56px;border-radius:50%;
+  position:fixed;bottom:26px;left:26px;z-index:999;
+  width:58px;height:58px;border-radius:50%;
   background:#25d366;
   display:grid;place-items:center;
-  box-shadow:0 6px 20px rgba(37,211,102,.4);
+  box-shadow:0 6px 22px rgba(37,211,102,.45);
   transition:.25s;
 }
-.float-wa:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(37,211,102,.55)}
-.float-wa svg{width:28px;height:28px;fill:#fff}
+.float-wa:hover{transform:scale(1.08);box-shadow:0 10px 28px rgba(37,211,102,.6)}
+.float-wa svg{width:30px;height:30px;fill:#fff}
 
 /* ═══════════ حركات الظهور ═══════════ */
-.reveal{
-  opacity:0;transform:translateY(24px);
-  transition:opacity .6s ease, transform .6s ease;
-}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease, transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
 
 /* ═══════════ الاستجابة ═══════════ */
 @media (max-width:960px){
-  .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}
+  .hero-grid{grid-template-columns:1fr;gap:44px;text-align:center}
   .hero p.lead{margin-inline:auto}
+  .hero-quick{justify-content:center;text-align:right;max-width:560px;margin-inline:auto}
   .hero-cta{justify-content:center}
-  .hero-points{justify-content:center}
-  .product-image{order:-1;max-width:400px;margin:0 auto}
-  .trust-grid{grid-template-columns:1fr 1fr;gap:22px}
-  .specs-grid{grid-template-columns:1fr;gap:30px}
-  .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .hero-trust{justify-content:center}
+  .hero-badge{margin-inline:auto}
+  .trust-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .specs-grid{grid-template-columns:1fr;gap:32px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
 }
 @media (max-width:768px){
   .nav-links{
-    position:fixed;inset:68px 0 auto 0;
-    background:#fff;
-    flex-direction:column;gap:0;
-    padding:0 20px;max-height:0;overflow:hidden;
+    position:fixed;inset:72px 0 auto 0;background:#fff;
+    flex-direction:column;gap:0;padding:0 20px;max-height:0;overflow:hidden;
     transition:max-height .35s ease, padding .35s ease;
     border-bottom:1px solid var(--border);
-    box-shadow:0 8px 20px rgba(15,23,42,.06);
+    box-shadow:0 10px 24px rgba(15,23,42,.08);
   }
-  .nav-links.open{max-height:400px;padding:12px 20px 20px}
-  .nav-links a{display:block;padding:13px 0;border-bottom:1px solid var(--border);font-size:1rem;border-radius:0}
+  .nav-links.open{max-height:420px;padding:14px 20px 22px}
+  .nav-links a{display:block;padding:14px 0;border-bottom:1px solid var(--border);font-size:1rem;border-radius:0}
   .nav-links a:hover{background:transparent}
   .nav .btn-primary{display:none}
   .burger{display:block}
   section{padding:60px 0}
-  .hero{padding:50px 0 60px}
+  .hero{padding:44px 0 60px}
   .form-row{grid-template-columns:1fr}
-  .order-box{padding:30px 22px}
-  .price-card{padding:36px 24px}
+  .order-box{padding:32px 22px}
+  .price-card{padding:40px 24px}
+  .product-offer-badge{top:28px;right:28px}
 }
 @media (max-width:520px){
   .foot-grid{grid-template-columns:1fr}
-  .trust-grid{grid-template-columns:1fr 1fr;gap:16px}
-  .trust-item b{font-size:1.4rem}
-  .float-wa{width:50px;height:50px;bottom:16px;left:16px}
-  .float-wa svg{width:24px;height:24px}
-  .hero-points{gap:14px}
-  .hero-points div{font-size:.83rem}
+  .trust-grid{grid-template-columns:1fr}
+  .trust-item{justify-content:flex-start}
+  .float-wa{width:52px;height:52px;bottom:18px;left:18px}
+  .float-wa svg{width:26px;height:26px}
+  .hero-quick{grid-template-columns:1fr;gap:10px}
+  .hero-trust{gap:16px;flex-direction:column;align-items:center}
+  .price-amount .num{font-size:2.9rem}
+  .product-price-tag{flex-direction:column;text-align:center;gap:8px}
 }
 </style>
 </head>
@@ -647,89 +713,92 @@ footer h4{
   </div>
 </header>
 
-<!-- ═══ الهيرو ═══ -->
+<!-- ═══════════════════════════════════════════
+     الهيرو الاحترافي
+     ═══════════════════════════════════════════ -->
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
 
+      <!-- النص -->
       <div class="hero-text">
-        <div class="hero-badge">جهاز Vgate iCar Pro الأصلي</div>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          جهاز Vgate iCar Pro الأصلي
+        </div>
 
         <h1>
-          اكتشف أعطال سيارتك <span>بنفسك في دقيقة</span>
+          اكتشف أعطال سيارتك<br>
+          <span class="highlight">بنفسك في دقيقة</span>
         </h1>
 
         <p class="lead">
-          جهاز <strong>Diga Scanner</strong> يقرأ ويحذف أكواد الأعطال، يكتشف
-          أكثر من <strong>9530 عطل</strong>، ويعمل مع جميع السيارات — بسعر مناسب
-          وتوصيل مجاني.
+          جهاز <strong>Diga Scanner</strong> يقرأ أكواد الأعطال، يكتشف
+          أكثر من <strong>9530 عطل</strong>، ويعمل مع جميع السيارات —
+          بدون خبرة تقنية.
         </p>
 
-        <div class="hero-cta">
-          <a href="#order" class="btn btn-primary btn-large">🛒 اطلب الآن</a>
-          <a href="#features" class="btn btn-outline btn-large">اكتشف المزيد</a>
-        </div>
-
-        <div class="hero-points">
+        <div class="hero-quick">
           <div>
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
             +9530 عطل مدعوم
           </div>
           <div>
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            دفع عند الاستلام
+            يعمل مع كل السيارات
           </div>
           <div>
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            ضمان سنة كاملة
+            بدون شحن أو بطارية
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            تطبيق بالعربية
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#order" class="btn btn-accent btn-large">
+            🛒 اطلب الآن — 13,900 دج
+          </a>
+          <a href="#features" class="btn btn-outline btn-large">
+            اكتشف المزيد
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div>
+            <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            توصيل مجاني لكل الولايات
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+            الدفع عند الاستلام
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 17z"/></svg>
+            دعم فني عبر واتساب
           </div>
         </div>
       </div>
 
-      <div class="product-image">
-        <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#1e293b"/>
-              <stop offset="100%" stop-color="#0f172a"/>
-            </linearGradient>
-            <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#dbeafe"/>
-              <stop offset="100%" stop-color="#bfdbfe"/>
-            </linearGradient>
-          </defs>
+      <!-- الصورة -->
+      <div class="hero-product">
+        <div class="product-card">
+          <div class="product-offer-badge">خصم 20%</div>
+          <img src="product.jpg.png" alt="Diga Scanner - Vgate iCar Pro OBD-II">
+        </div>
 
-          <!-- الكابل -->
-          <path d="M150 360 Q150 320 150 300" stroke="#0f172a" stroke-width="14" fill="none" stroke-linecap="round"/>
-          <rect x="128" y="348" width="44" height="28" rx="7" fill="#334155" stroke="#0f172a" stroke-width="2"/>
-          <rect x="138" y="356" width="24" height="12" rx="3" fill="#0f172a"/>
-
-          <!-- الجسم -->
-          <rect x="40" y="40" width="220" height="270" rx="30" fill="url(#bodyGrad)" stroke="#334155" stroke-width="2"/>
-
-          <!-- الشاشة -->
-          <rect x="62" y="66" width="176" height="130" rx="14" fill="url(#screenGrad)" stroke="#1e40af" stroke-width="2"/>
-
-          <!-- محتوى الشاشة -->
-          <rect x="80" y="88" width="80" height="8" rx="4" fill="#1d4ed8"/>
-          <rect x="80" y="106" width="140" height="5" rx="2.5" fill="#93c5fd"/>
-          <rect x="80" y="120" width="115" height="5" rx="2.5" fill="#93c5fd"/>
-          <rect x="80" y="134" width="130" height="5" rx="2.5" fill="#93c5fd"/>
-
-          <!-- علامة صح -->
-          <circle cx="190" cy="168" r="16" fill="#16a34a"/>
-          <path d="M183 168 l5 5 l10 -11" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-          <!-- الأزرار -->
-          <circle cx="100" cy="240" r="20" fill="#1e293b" stroke="#475569" stroke-width="2"/>
-          <circle cx="100" cy="240" r="8" fill="#3b82f6"/>
-
-          <rect x="140" y="222" width="42" height="36" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
-          <rect x="192" y="222" width="42" height="36" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
-
-          <!-- شريط سفلي -->
-          <rect x="72" y="288" width="156" height="6" rx="3" fill="#1d4ed8" opacity=".9"/>
-        </svg>
+        <div class="product-price-tag">
+          <div>
+            <div class="label">السعر الحالي</div>
+            <div class="price">
+              <span class="amount">13,900</span>
+              <span class="cur">دج</span>
+            </div>
+          </div>
+          <div class="old">17,500 دج</div>
+        </div>
       </div>
 
     </div>
@@ -737,13 +806,45 @@ footer h4{
 </section>
 
 <!-- ═══ شريط الثقة ═══ -->
-<div class="trust">
+<div class="trust-strip">
   <div class="container">
     <div class="trust-grid">
-      <div class="trust-item"><b>+9530</b><span>عطل مدعوم</span></div>
-      <div class="trust-item"><b>+12K</b><span>عميل راضٍ</span></div>
-      <div class="trust-item"><b>4.9★</b><span>تقييم العملاء</span></div>
-      <div class="trust-item"><b>99.8%</b><span>دقة القراءة</span></div>
+      <div class="trust-item">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div>
+          <b>+9530</b>
+          <span>عطل مدعوم</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div>
+          <b>99.8%</b>
+          <span>دقة القراءة</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg>
+        </div>
+        <div>
+          <b>+12K</b>
+          <span>عميل راضٍ</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div>
+          <b>مجاني</b>
+          <span>توصيل لكل الولايات</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -762,12 +863,6 @@ footer h4{
         <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></div>
         <h3>كشف +9530 عطل</h3>
         <p>قاعدة بيانات ضخمة تغطي المحرك، ناقل الحركة، ABS، والوسائد الهوائية.</p>
-      </div>
-
-      <div class="feat reveal">
-        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></div>
-        <h3>حذف الأكواد</h3>
-        <p>امسح ضوء «Check Engine» وأعد ضبط كمبيوتر السيارة بعد إصلاح العطل.</p>
       </div>
 
       <div class="feat reveal">
@@ -792,6 +887,12 @@ footer h4{
         <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
         <h3>بدون شحن</h3>
         <p>يعمل مباشرة من منفذ OBD-II بالسيارة. لا يحتاج بطاريات خارجية.</p>
+      </div>
+
+      <div class="feat reveal">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>سهل الاستخدام</h3>
+        <p>لا يحتاج أي خبرة تقنية — وصّل وافتح التطبيق وابدأ الفحص فوراً.</p>
       </div>
     </div>
   </div>
@@ -820,7 +921,7 @@ footer h4{
       <div class="step reveal">
         <div class="step-num">3</div>
         <h3>اقرأ النتيجة</h3>
-        <p>ستظهر الأكواد وشرحها بالعربية مع إمكانية حذفها فورًا.</p>
+        <p>ستظهر الأكواد وشرحها بالعربية على هاتفك مباشرة.</p>
       </div>
     </div>
   </div>
@@ -840,9 +941,9 @@ footer h4{
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> دعم كامل لبروتوكولات OBD-II العشرة</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> اكتشاف أكثر من 9530 كود عطل</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> متوافق مع السيارات من 1996 حتى 2025</li>
-        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> قراءة وحذف الأكواد وإطفاء لمبة المحرك</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> اتصال Bluetooth مع Android و iOS</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> قراءة بيانات VIN ورقم الهيكل</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> بنزين / ديزل / جميع الماركات</li>
       </ul>
 
       <div class="spec-box reveal">
@@ -852,7 +953,6 @@ footer h4{
         <div class="spec-row"><span>الأعطال المدعومة</span><span>+9530 كود</span></div>
         <div class="spec-row"><span>التوافق</span><span>Android / iOS</span></div>
         <div class="spec-row"><span>الطاقة</span><span>من منفذ OBD-II</span></div>
-        <div class="spec-row"><span>الضمان</span><span>سنة كاملة</span></div>
         <div class="spec-row"><span>العلبة</span><span>جهاز + دليل + تطبيق</span></div>
       </div>
     </div>
@@ -885,11 +985,10 @@ footer h4{
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> دعم +9530 كود عطل</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> تطبيق للهاتف مجانًا</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> دليل استخدام بالعربية</li>
-        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> ضمان سنة كاملة</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> دعم فني عبر واتساب</li>
       </ul>
 
-      <a href="#order" class="btn btn-primary btn-large">
+      <a href="#order" class="btn btn-accent">
         🛒 اطلب الآن
       </a>
 
@@ -901,48 +1000,8 @@ footer h4{
   </div>
 </section>
 
-<!-- ═══ آراء العملاء ═══ -->
-<section class="reviews">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">آراء العملاء</span>
-      <h2>ماذا يقول مستخدمونا؟</h2>
-      <p>أكثر من 12,000 عميل استخدموا Diga Scanner لتشخيص سياراتهم.</p>
-    </div>
-
-    <div class="rev-grid">
-      <div class="rev reveal">
-        <div class="stars">★★★★★</div>
-        <p>"كنت أدفع 3000 دج كل مرة فقط لأعرف العطل. الآن أفحص سيارتي بنفسي في البيت. أفضل شراء قمت به هذا العام."</p>
-        <div class="rev-author">
-          <div class="avatar">أ</div>
-          <div><b>أحمد بن عمار</b><span>الجزائر العاصمة</span></div>
-        </div>
-      </div>
-
-      <div class="rev reveal">
-        <div class="stars">★★★★★</div>
-        <p>"استعملته لفحص سيارة قبل شرائها، وطلع فيها عطل في ناقل الحركة كان مخفي. أنقذني من خسارة كبيرة."</p>
-        <div class="rev-author">
-          <div class="avatar">س</div>
-          <div><b>سفيان مرابط</b><span>وهران</span></div>
-        </div>
-      </div>
-
-      <div class="rev reveal">
-        <div class="stars">★★★★★</div>
-        <p>"أنا ميكانيكي، وأستعمله يوميًا في الورشة. سريع ودقيق ويكشف أعطال ما كان يكتشفها جهازي القديم."</p>
-        <div class="rev-author">
-          <div class="avatar">ك</div>
-          <div><b>كريم حجاج</b><span>قسنطينة</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ FAQ ═══ -->
-<section id="faq">
+<section id="faq" style="background:var(--bg-soft)">
   <div class="container">
     <div class="sec-head reveal">
       <span class="sec-tag">الأسئلة الشائعة</span>
@@ -962,22 +1021,12 @@ footer h4{
 
       <details class="reveal">
         <summary>هل أحتاج هاتف؟</summary>
-        <p>نعم، يتصل الجهاز بهاتفك عبر Bluetooth باستخدام تطبيق مجاني (Android أو iOS) لعرض النتائج بالتفصيل وحذف الأكواد.</p>
+        <p>نعم، يتصل الجهاز بهاتفك عبر Bluetooth باستخدام تطبيق مجاني (Android أو iOS) لعرض النتائج بالتفصيل.</p>
       </details>
 
       <details class="reveal">
         <summary>كيف تتم عملية الدفع والتوصيل؟</summary>
         <p>نعتمد الدفع عند الاستلام. تدفع فقط عندما يصل الجهاز إلى يدك وتتأكد منه. التوصيل مجاني ويستغرق من 2 إلى 5 أيام عمل.</p>
-      </details>
-
-      <details class="reveal">
-        <summary>هل يوجد ضمان؟</summary>
-        <p>نعم، الجهاز يأتي مع ضمان سنة كاملة يغطي عيوب الصناعة. في حال وجود أي خلل، نستبدله مجانًا.</p>
-      </details>
-
-      <details class="reveal">
-        <summary>هل يمكنني إرجاع الجهاز إذا لم يعجبني؟</summary>
-        <p>نعم، لديك 7 أيام من تاريخ الاستلام لإرجاع الجهاز في حال عدم رضاك، بشرط أن يكون بحالته الأصلية مع كامل الملحقات.</p>
       </details>
     </div>
   </div>
@@ -1046,7 +1095,7 @@ footer h4{
           <textarea id="note" placeholder="العنوان بالتفصيل، أو أي استفسار..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-accent">
           📱 إرسال الطلب عبر واتساب
         </button>
 
@@ -1086,9 +1135,7 @@ footer h4{
         <h4>معلومات</h4>
         <ul class="foot-links">
           <li><a href="#faq">الأسئلة الشائعة</a></li>
-          <li><a href="#">سياسة التوصيل</a></li>
-          <li><a href="#">سياسة الإرجاع</a></li>
-          <li><a href="#">شروط الضمان</a></li>
+          <li><a href="#order">اطلب الآن</a></li>
         </ul>
       </div>
 
@@ -1163,7 +1210,7 @@ document.getElementById('orderForm').addEventListener('submit', function(e){
   msg += "📍 الولاية: " + wilaya + "\n";
   msg += "📦 الكمية: " + qty + "\n";
   if(note) msg += "📝 ملاحظات: " + note + "\n";
-  msg += "\nأرجو تأكيد الطلب. شكرًا!";
+  msg += "\nأرجو تأكيد الطلب. شكراً!";
 
   window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg), "_blank");
 });
