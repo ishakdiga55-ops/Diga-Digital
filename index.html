@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diga Scanner | جهاز كشف أعطال السيارة Vgate iCar Pro</title>
-<meta name="description" content="Diga Scanner — جهاز Vgate iCar Pro OBD-II الأصلي. يكشف أكثر من 9530 عطل. توصيل مجاني والدفع عند الاستلام.">
+<title>Diga Scanner Pro | جهاز KONNWEI KW902 لتشخيص أعطال السيارة</title>
+<meta name="description" content="Diga Scanner Pro — جهاز KONNWEI KW902 الأصلي بـ Bluetooth 4.0. يكشف أكثر من 9500 عطل. واجهة عربية احترافية. توصيل مجاني والدفع عند الاستلام.">
 <meta name="theme-color" content="#0a0f1c">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,6 @@
   --bg:#0a0f1c;
   --bg-2:#0f172a;
   --card:#131c30;
-  --card-2:#1a2540;
   --container:1180px;
 }
 
@@ -38,19 +37,14 @@
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{
   font-family:'Cairo',system-ui,-apple-system,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.75;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-  padding-bottom:0;
+  background:var(--bg);color:var(--text);line-height:1.75;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 img{max-width:100%;display:block;height:auto}
 a{text-decoration:none;color:inherit}
 button,input,select,textarea{font-family:inherit;font-size:inherit}
 .container{max-width:var(--container);margin:0 auto;padding:0 20px}
 
-/* ═══ الشريط العلوي ═══ */
 .topbar{
   background:linear-gradient(90deg,#1e40af,#3b82f6,#1e40af);
   color:#fff;text-align:center;padding:12px 16px;
@@ -59,12 +53,10 @@ button,input,select,textarea{font-family:inherit;font-size:inherit}
 }
 .topbar b{color:#fde68a;font-weight:800}
 
-/* ═══ الهيدر ═══ */
 header{
   position:sticky;top:0;z-index:100;
   background:rgba(10,15,28,.85);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid var(--border);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
@@ -75,7 +67,7 @@ header{
   display:grid;place-items:center;flex-shrink:0;
   box-shadow:0 0 20px var(--primary-glow);
 }
-.logo-icon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap الض:round;stroke-linejoin:round}
+.logo-icon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .logo span{color:var(--primary)}
 
 .nav-links{display:flex;gap:4px;align-items:center;list-style:none}
@@ -85,18 +77,11 @@ header{
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:9px;
   padding:14px 28px;border-radius:11px;font-weight:700;font-size:.96rem;
-  border:none;cursor:pointer;transition:all .25s;white-space:nowrap;
-  font-family:inherit;
+  border:none;cursor:pointer;transition:all .25s;white-space:nowrap;font-family:inherit;
 }
-.btn-primary{
-  background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-  color:#fff;box-shadow:0 4px 20px var(--primary-glow);
-}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;box-shadow:0 4px 20px var(--primary-glow)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(59,130,246,.55)}
-.btn-accent{
-  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
-  color:#fff;box-shadow:0 4px 20px rgba(245,158,11,.4);
-}
+.btn-accent{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;box-shadow:0 4px 20px rgba(245,158,11,.4)}
 .btn-accent:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(245,158,11,.55)}
 .btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border-hi)}
 .btn-outline:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-light)}
@@ -105,7 +90,6 @@ header{
 .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .burger span{display:block;width:24px;height:2.5px;background:var(--text);margin:5px 0;border-radius:3px;transition:.3s}
 
-/* ═══ الهيرو ═══ */
 .hero{
   position:relative;padding:60px 0 80px;
   background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(59,130,246,.15),transparent 60%),var(--bg);
@@ -117,12 +101,6 @@ header{
   background:radial-gradient(circle,rgba(59,130,246,.12),transparent 70%);
   pointer-events:none;
 }
-.hero::after{
-  content:'';position:absolute;bottom:-250px;right:-150px;
-  width:600px;height:600px;border-radius:50%;
-  background:radial-gradient(circle,rgba(245,158,11,.08),transparent 70%);
-  pointer-events:none;
-}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 
 .hero-badge{
@@ -132,10 +110,7 @@ header{
   font-size:.85rem;font-weight:700;margin-bottom:24px;
   box-shadow:0 0 20px var(--primary-glow);
 }
-.hero-badge .dot{
-  width:9px;height:9px;border-radius:50%;background:var(--green);
-  animation:pulseDot 2s infinite;
-}
+.hero-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--green);animation:pulseDot 2s infinite}
 @keyframes pulseDot{
   0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}
   50%{box-shadow:0 0 0 8px rgba(34,197,94,0)}
@@ -159,7 +134,6 @@ header{
 }
 
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
-
 .hero-trust{display:flex;gap:24px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--border)}
 .hero-trust div{display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--muted);font-weight:600}
 .hero-trust svg{width:18px;height:18px;stroke:var(--primary);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
@@ -176,7 +150,15 @@ header{
   background:linear-gradient(90deg,var(--primary),var(--accent));
   box-shadow:0 0 20px var(--primary);
 }
-.product-card img{width:100%;height:auto;border-radius:14px;display:block}
+.product-card img{width:100%;height:auto;border-radius:14px;display:block;background:#fff}
+
+.product-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.product-thumb{
+  background:var(--card);border:1.5px solid var(--border-hi);
+  border-radius:12px;padding:6px;cursor:pointer;transition:.25s;overflow:hidden;
+}
+.product-thumb img{width:100%;height:70px;object-fit:cover;border-radius:8px;background:#fff}
+.product-thumb:hover,.product-thumb.active{border-color:var(--primary);box-shadow:0 0 20px var(--primary-glow)}
 
 .product-offer-badge{
   position:absolute;top:30px;right:30px;
@@ -194,18 +176,11 @@ header{
 }
 .product-price-tag .label{font-size:.82rem;color:var(--muted);font-weight:600;margin-bottom:4px}
 .product-price-tag .price{display:flex;align-items:baseline;gap:6px}
-.product-price-tag .amount{
-  font-size:1.8rem;font-weight:900;color:var(--primary);
-  line-height:1;text-shadow:0 0 20px var(--primary-glow);
-}
+.product-price-tag .amount{font-size:1.8rem;font-weight:900;color:var(--primary);line-height:1;text-shadow:0 0 20px var(--primary-glow)}
 .product-price-tag .cur{font-size:.88rem;color:var(--muted);font-weight:700}
 .product-price-tag .old{color:var(--muted);text-decoration:line-through;font-size:.86rem;font-weight:600}
 
-/* ═══ شريط الثقة ═══ */
-.trust-strip{
-  background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  padding:24px 0;
-}
+.trust-strip{background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0}
 .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .trust-item{display:flex;align-items:center;gap:12px}
 .trust-item .icon{
@@ -217,7 +192,6 @@ header{
 .trust-item b{display:block;font-size:1rem;font-weight:800;color:var(--text);line-height:1.3}
 .trust-item span{font-size:.82rem;color:var(--muted)}
 
-/* ═══ الأقسام ═══ */
 section{padding:80px 0}
 .sec-head{text-align:center;max-width:660px;margin:0 auto 48px}
 .sec-tag{
@@ -228,13 +202,9 @@ section{padding:80px 0}
 .sec-head h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:900;margin-bottom:14px;line-height:1.4;color:var(--text)}
 .sec-head p{color:var(--muted);font-size:1.02rem}
 
-/* ═══ المميزات ═══ */
 .features{background:var(--bg-2)}
 .feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-.feat{
-  background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:28px 24px;transition:all .25s;
-}
+.feat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;transition:all .25s}
 .feat:hover{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 10px 40px rgba(59,130,246,.2)}
 .feat-icon{
   width:54px;height:54px;border-radius:13px;
@@ -246,7 +216,6 @@ section{padding:80px 0}
 .feat h3{font-size:1.08rem;font-weight:800;margin-bottom:9px;color:var(--text)}
 .feat p{color:var(--muted);font-size:.93rem;line-height:1.8}
 
-/* ═══ كيف يعمل ═══ */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
 .step{text-align:center;padding:22px 16px}
 .step-num{
@@ -259,7 +228,6 @@ section{padding:80px 0}
 .step h3{font-size:1.08rem;font-weight:800;margin-bottom:9px}
 .step p{color:var(--muted);font-size:.93rem}
 
-/* ═══ المواصفات ═══ */
 .specs{background:var(--bg-2)}
 .specs-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
 .spec-list{list-style:none;display:grid;gap:11px}
@@ -287,8 +255,6 @@ section{padding:80px 0}
 .spec-row span:first-child{color:var(--muted)}
 .spec-row span:last-child{font-weight:700;color:var(--text)}
 
-/* ═══مان ═══ */
-.warranty{background:var(--bg)}
 .warranty-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
 .warranty-card{
   background:var(--card);border:1px solid var(--border);border-radius:16px;
@@ -308,13 +274,9 @@ section{padding:80px 0}
 .warranty-card h3{font-size:1.1rem;font-weight:800;margin-bottom:10px;color:var(--text)}
 .warranty-card p{color:var(--muted);font-size:.93rem;line-height:1.8}
 
-/* ═══ آراء العملاء ═══ */
 .reviews{background:var(--bg-2)}
 .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-.rev{
-  background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:28px 24px;transition:.25s;position:relative;
-}
+.rev{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;transition:.25s;position:relative}
 .rev::before{
   content:'"';position:absolute;top:14px;left:22px;
   font-family:Georgia,serif;font-size:4.5rem;line-height:1;
@@ -334,7 +296,6 @@ section{padding:80px 0}
 .rev-author b{display:block;font-size:.93rem;color:var(--text)}
 .rev-author span{font-size:.8rem;color:var(--muted)}
 
-/* ═══ السعر ═══ */
 .price-card{
   max-width:580px;margin:0 auto;background:var(--card);
   border:2px solid var(--primary);border-radius:22px;padding:46px 38px;
@@ -355,10 +316,7 @@ section{padding:80px 0}
 .price-card h3{font-size:1.4rem;font-weight:900;margin-bottom:6px;color:var(--text)}
 .price-card .desc{color:var(--muted);font-size:.92rem;margin-bottom:26px}
 .price-amount{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-bottom:6px}
-.price-amount .num{
-  font-size:3.4rem;font-weight:900;color:var(--primary);
-  line-height:1;text-shadow:0 0 30px var(--primary-glow);
-}
+.price-amount .num{font-size:3.4rem;font-weight:900;color:var(--primary);line-height:1;text-shadow:0 0 30px var(--primary-glow)}
 .price-amount .cur{font-size:1.15rem;color:var(--muted);font-weight:700}
 .price-old{color:var(--muted);text-decoration:line-through;font-size:1.1rem;font-weight:600;margin-bottom:28px}
 .price-feats{
@@ -374,27 +332,18 @@ section{padding:80px 0}
 }
 .price-note svg{width:15px;height:15px;stroke:var(--green);fill:none;stroke-width:2.5}
 
-/* ═══ FAQ ═══ */
 .faq-wrap{max-width:800px;margin:0 auto}
-details{
-  background:var(--card);border:1px solid var(--border);border-radius:13px;
-  margin-bottom:12px;transition:.25s;
-}
+details{background:var(--card);border:1px solid var(--border);border-radius:13px;margin-bottom:12px;transition:.25s}
 details[open]{border-color:var(--primary);box-shadow:0 0 30px var(--primary-glow)}
 summary{
   padding:20px 24px;cursor:pointer;font-weight:700;font-size:1rem;
-  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
-  color:var(--text);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--text);
 }
 summary::-webkit-details-marker{display:none}
-summary::after{
-  content:'+';font-size:1.5rem;color:var(--primary);font-weight:400;
-  transition:transform .25s;line-height:1;flex-shrink:0;
-}
+summary::after{content:'+';font-size:1.5rem;color:var(--primary);font-weight:400;transition:transform .25s;line-height:1;flex-shrink:0}
 details[open] summary::after{transform:rotate(45deg)}
 details p{padding:0 24px 22px;color:var(--muted);font-size:.94rem;line-height:1.9}
 
-/* ═══ نموذج الطلب ═══ */
 .order{background:var(--bg-2)}
 .order-box{
   max-width:720px;margin:0 auto;background:var(--card);
@@ -405,23 +354,15 @@ details p{padding:0 24px 22px;color:var(--muted);font-size:.94rem;line-height:1.
 .field{margin-bottom:20px;position:relative}
 .field label{display:block;font-size:.9rem;font-weight:700;margin-bottom:9px;color:var(--text)}
 .field label .req{color:var(--red)}
-.field input,
-.field select,
-.field textarea{
+.field input,.field select,.field textarea{
   width:100%;padding:14px 16px;background:var(--bg);
   border:1.5px solid var(--border-hi);border-radius:11px;
-  color:var(--text);font-size:.95rem;transition:.2s;outline:none;
-  font-family:inherit;
+  color:var(--text);font-size:.95rem;transition:.2s;outline:none;font-family:inherit;
 }
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-  border-color:var(--primary);
-  box-shadow:0 0 0 4px var(--primary-light);
-  background:var(--bg-2);
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--primary);box-shadow:0 0 0 4px var(--primary-light);background:var(--bg-2);
 }
-.field input::placeholder,
-.field textarea::placeholder{color:#64748b}
+.field input::placeholder,.field textarea::placeholder{color:#64748b}
 .field select{
   appearance:none;cursor:pointer;
   background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2.5'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
@@ -431,24 +372,13 @@ details p{padding:0 24px 22px;color:var(--muted);font-size:.94rem;line-height:1.
 .field select option{background:var(--bg-2);color:var(--text)}
 .field textarea{resize:vertical;min-height:90px}
 
-/* الحقول التي فيها خطأ */
-.field.error input,
-.field.error select{
-  border-color:var(--red);
-  box-shadow:0 0 0 4px rgba(239,68,68,.15);
-}
-.field-error{
-  color:var(--red);font-size:.8rem;font-weight:600;
-  margin-top:7px;display:none;align-items:center;gap:6px;
-}
+.field.error input,.field.error select{border-color:var(--red);box-shadow:0 0 0 4px rgba(239,68,68,.15)}
+.field-error{color:var(--red);font-size:.8rem;font-weight:600;margin-top:7px;display:none;align-items:center;gap:6px}
 .field.error .field-error{display:flex}
 .field-error svg{width:14px;height:14px;stroke:var(--red);fill:none;stroke-width:2.5;flex-shrink:0}
 
-/* خيارات التوصيل */
 .delivery-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.delivery-option{
-  position:relative;cursor:pointer;
-}
+.delivery-option{position:relative;cursor:pointer}
 .delivery-option input{position:absolute;opacity:0;pointer-events:none}
 .delivery-option label{
   display:block;padding:16px 14px;text-align:center;
@@ -458,49 +388,25 @@ details p{padding:0 24px 22px;color:var(--muted);font-size:.94rem;line-height:1.
 }
 .delivery-option label b{display:block;color:var(--text);font-size:.95rem;margin-bottom:3px}
 .delivery-option label small{color:var(--muted);font-size:.78rem;font-weight:500}
-.delivery-option input:checked + label{
-  border-color:var(--primary);
-  background:var(--primary-light);
-  box-shadow:0 0 20px var(--primary-glow);
-}
+.delivery-option input:checked + label{border-color:var(--primary);background:var(--primary-light);box-shadow:0 0 20px var(--primary-glow)}
 .delivery-option input:checked + label b{color:var(--primary)}
-.delivery-option svg{
-  width:22px;height:22px;margin:0 auto 6px;
-  stroke:var(--text-2);fill:none;stroke-width:2;
-  stroke-linecap:round;stroke-linejoin:round;display:block;
-}
+.delivery-option svg{width:22px;height:22px;margin:0 auto 6px;stroke:var(--text-2);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:block}
 .delivery-option input:checked + label svg{stroke:var(--primary)}
 
-/* ملخص الطلب */
-.order-summary{
-  background:var(--bg);border:1.5px solid var(--border-hi);
-  border-radius:14px;padding:20px 22px;margin-bottom:22px;
-}
-.summary-row{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:9px 0;font-size:.92rem;color:var(--text-2);
-}
-.summary-row.total{
-  border-top:1.5px dashed var(--border-hi);
-  margin-top:8px;padding-top:15px;
-  font-size:1.08rem;font-weight:800;color:var(--text);
-}
+.order-summary{background:var(--bg);border:1.5px solid var(--border-hi);border-radius:14px;padding:20px 22px;margin-bottom:22px}
+.summary-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;font-size:.92rem;color:var(--text-2)}
+.summary-row.total{border-top:1.5px dashed var(--border-hi);margin-top:8px;padding-top:15px;font-size:1.08rem;font-weight:800;color:var(--text)}
 .summary-row.total span:last-child{color:var(--primary);font-size:1.35rem;text-shadow:0 0 15px var(--primary-glow)}
 
 .order-box .btn{width:100%;padding:18px;font-size:1.05rem;margin-top:8px}
 .order-box .btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
-.btn-loader{
-  width:18px;height:18px;border:2.5px solid rgba(255,255,255,.3);
-  border-top-color:#fff;border-radius:50%;
-  animation:spin .8s linear infinite;display:none;
-}
+.btn-loader{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;display:none}
 .btn.loading .btn-loader{display:inline-block}
 .btn.loading .btn-text{display:none}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 .form-note{text-align:center;font-size:.85rem;color:var(--muted);margin-top:16px}
 
-/* ═══ الفوتر ═══ */
 footer{background:#050810;color:#cbd5e1;padding:56px 0 24px;border-top:1px solid var(--border)}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;margin-bottom:40px}
 .foot-brand .logo{color:#fff;margin-bottom:16px}
@@ -511,20 +417,13 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
 .foot-links a{color:#94a3b8;font-size:.9rem;transition:.2s}
 .foot-links a:hover{color:var(--primary)}
 .foot-contact{list-style:none}
-.foot-contact li{
-  display:flex;gap:11px;color:#94a3b8;font-size:.89rem;
-  margin-bottom:13px;align-items:flex-start;
-}
-.foot-contact svg{
-  width:17px;height:17px;stroke:var(--primary);fill:none;
-  stroke-width:2;flex-shrink:0;margin-top:6px;
-}
+.foot-contact li{display:flex;gap:11px;color:#94a3b8;font-size:.89rem;margin-bottom:13px;align-items:flex-start}
+.foot-contact svg{width:17px;height:17px;stroke:var(--primary);fill:none;stroke-width:2;flex-shrink:0;margin-top:6px}
 .foot-contact a{color:#94a3b8;transition:.2s}
 .foot-contact a:hover{color:var(--primary)}
 .copyright{border-top:1px solid var(--border);padding-top:24px;text-align:center;color:#64748b;font-size:.86rem}
 .copyright b{color:var(--primary)}
 
-/* ═══ زر واتساب عائم ═══ */
 .float-wa{
   position:fixed;bottom:26px;left:26px;z-index:998;
   width:58px;height:58px;border-radius:50%;
@@ -540,36 +439,21 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
 .float-wa:hover{transform:scale(1.08)}
 .float-wa svg{width:30px;height:30px;fill:#fff}
 
-/* ═══ زر طلب ثابت في الموبايل ═══ */
 .mobile-cta{
-  display:none;
-  position:fixed;bottom:0;right:0;left:0;z-index:997;
-  background:rgba(10,15,28,.96);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border-top:1px solid var(--border);
-  padding:12px 16px;
+  display:none;position:fixed;bottom:0;right:0;left:0;z-index:997;
+  background:rgba(10,15,28,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--border);padding:12px 16px;
   box-shadow:0 -8px 30px rgba(0,0,0,.5);
 }
-.mobile-cta-inner{
-  display:flex;align-items:center;gap:12px;
-  max-width:600px;margin:0 auto;
-}
+.mobile-cta-inner{display:flex;align-items:center;gap:12px;max-width:600px;margin:0 auto}
 .mobile-cta-price{flex-shrink:0;text-align:right}
 .mobile-cta-price .label{font-size:.72rem;color:var(--muted);font-weight:600;line-height:1}
-.mobile-cta-price .amount{
-  font-size:1.15rem;font-weight:900;color:var(--primary);
-  line-height:1.2;text-shadow:0 0 15px var(--primary-glow);
-}
-.mobile-cta .btn{
-  flex:1;padding:13px 18px;font-size:.94rem;
-}
+.mobile-cta-price .amount{font-size:1.15rem;font-weight:900;color:var(--primary);line-height:1.2;text-shadow:0 0 15px var(--primary-glow)}
+.mobile-cta .btn{flex:1;padding:13px 18px;font-size:.94rem}
 
-/* ═══ الحركات ═══ */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
 
-/* ═══ الاستجابة ═══ */
 @media (max-width:960px){
   .hero-grid{grid-template-columns:1fr;gap:44px;text-align:center}
   .hero p.lead{margin-inline:auto}
@@ -582,7 +466,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   .specs-grid{grid-template-columns:1fr;gap:32px}
   .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
 }
-
 @media (max-width:768px){
   body{padding-bottom:80px}
   .nav-links{
@@ -590,8 +473,7 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
     background:var(--bg-2);flex-direction:column;gap:0;align-items:stretch;
     padding:0 20px;max-height:0;overflow:hidden;
     transition:max-height .35s ease,padding .35s ease;
-    border-bottom:1px solid var(--border);
-    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    border-bottom:1px solid var(--border);box-shadow:0 10px 30px rgba(0,0,0,.5);
   }
   .nav-links.open{max-height:420px;padding:14px 20px 22px}
   .nav-links a{display:block;padding:14px 0;border-bottom:1px solid var(--border);font-size:1rem;border-radius:0}
@@ -606,7 +488,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   .mobile-cta{display:block}
   .float-wa{bottom:90px}
 }
-
 @media (max-width:520px){
   .foot-grid{grid-template-columns:1fr;gap:32px}
   .trust-grid{grid-template-columns:1fr;gap:14px}
@@ -622,12 +503,10 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
 </head>
 <body>
 
-<!-- ═══ الشريط العلوي ═══ -->
 <div class="topbar">
   🔥 عرض خاص — <b>خصم 3,600 دج</b> + توصيل مجاني لفترة محدودة
 </div>
 
-<!-- ═══ الهيدر ═══ -->
 <header>
   <div class="container">
     <nav class="nav">
@@ -637,7 +516,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
         </div>
         Diga <span>Scanner</span>
       </a>
-
       <ul class="nav-links" id="navLinks">
         <li><a href="#features">المميزات</a></li>
         <li><a href="#how">كيف يعمل</a></li>
@@ -646,9 +524,7 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
         <li><a href="#pricing">السعر</a></li>
         <li><a href="#faq">الأسئلة</a></li>
       </ul>
-
       <a href="#order" class="btn btn-primary">اطلب الآن</a>
-
       <button class="burger" id="burger" aria-label="القائمة">
         <span></span><span></span><span></span>
       </button>
@@ -656,31 +532,27 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   </div>
 </header>
 
-<!-- ═══ الهيرو ═══ -->
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
       <div class="hero-text">
         <div class="hero-badge">
           <span class="dot"></span>
-          جهاز Vgate iCar Pro الأصلي
+          جهاز KONNWEI KW902 الأصلي — Bluetooth 4.0
         </div>
-
         <h1>
           اكتشف أعطال سيارتك<br>
           <span class="highlight">بنفسك في دقيقة</span>
         </h1>
-
         <p class="lead">
-          جهاز <strong>Diga Scanner</strong> يقرأ أكواد الأعطال، يكتشف
-          أكثر من <strong>9530 عطل</strong>، ويعمل مع جميع السيارات
-          بدون أي خبرة تقنية.
+          جهاز <strong>Diga Scanner Pro</strong> يقرأ أكواد الأعطال، يكتشف
+          أكثر من <strong>9500 عطل</strong>، ويعمل مع جميع السيارات
+          بواجهة عربية احترافية وسهلة.
         </p>
-
         <div class="hero-quick">
           <div>
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            +9530 عطل مدعوم
+            +9500 عطل مدعوم
           </div>
           <div>
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -688,19 +560,17 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
           </div>
           <div>
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            بدون شحن أو بطارية
+            Bluetooth 4.0
           </div>
           <div>
             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            تطبيق بالعربية
+            واجهة عربية احترافية
           </div>
         </div>
-
         <div class="hero-cta">
           <a href="#order" class="btn btn-accent btn-large">🛒 اطلب الآن — 13,900 دج</a>
           <a href="#features" class="btn btn-outline btn-large">اكتشف المزيد</a>
         </div>
-
         <div class="hero-trust">
           <div>
             <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
@@ -720,7 +590,19 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
       <div class="hero-product">
         <div class="product-card">
           <div class="product-offer-badge">خصم 20%</div>
-          <img src="product.jpg.png" alt="Diga Scanner - Vgate iCar Pro OBD-II">
+          <img src="product.PNG" alt="Diga Scanner Pro — KONNWEI KW902" id="mainImage">
+        </div>
+
+        <div class="product-thumbs">
+          <div class="product-thumb active" onclick="changeImage('product.PNG', this)">
+            <img src="product.PNG" alt="KONNWEI KW902">
+          </div>
+          <div class="product-thumb" onclick="changeImage('product-2.PNG', this)">
+            <img src="product-2.PNG" alt="KONNWEI KW902 - شرح LEDs">
+          </div>
+          <div class="product-thumb" onclick="changeImage('product-3.PNG', this)">
+            <img src="product-3.PNG" alt="KONNWEI KW902 - Android و iOS">
+          </div>
         </div>
 
         <div class="product-price-tag">
@@ -738,39 +620,29 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   </div>
 </section>
 
-<!-- ═══ شريط الثقة ═══ -->
 <div class="trust-strip">
   <div class="container">
     <div class="trust-grid">
       <div class="trust-item">
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <div><b>+9530</b><span>عطل مدعوم</span></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><b>+9500</b><span>عطل مدعوم</span></div>
       </div>
       <div class="trust-item">
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-        </div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
         <div><b>99.8%</b><span>دقة القراءة</span></div>
       </div>
       <div class="trust-item">
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg>
-        </div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
         <div><b>+12K</b><span>عميل راضٍ</span></div>
       </div>
       <div class="trust-item">
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        </div>
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
         <div><b>مجاني</b><span>توصيل لكل الولايات</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══ المميزات ═══ -->
 <section class="features" id="features">
   <div class="container">
     <div class="sec-head reveal">
@@ -778,11 +650,10 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
       <h2>كل ما تحتاجه لتشخيص سيارتك</h2>
       <p>جهاز واحد يغنيك عن زيارة الميكانيكي لكل عطل صغير.</p>
     </div>
-
     <div class="feat-grid">
       <div class="feat reveal">
         <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></div>
-        <h3>كشف +9530 عطل</h3>
+        <h3>كشف +9500 عطل</h3>
         <p>قاعدة بيانات ضخمة تغطي المحرك، ناقل الحركة، ABS، والوسائد الهوائية.</p>
       </div>
       <div class="feat reveal">
@@ -793,7 +664,7 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
       <div class="feat reveal">
         <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
         <h3>تطبيق للهاتف</h3>
-        <p>يتصل بالبلوتوث مع تطبيق مجاني على Android و iOS بواجهة عربية.</p>
+        <p>يتصل بالبلوتوث 4.0 مع تطبيق مجاني على Android و iOS بواجهة عربية.</p>
       </div>
       <div class="feat reveal">
         <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
@@ -814,7 +685,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   </div>
 </section>
 
-<!-- ═══ كيف يعمل ═══ -->
 <section id="how">
   <div class="container">
     <div class="sec-head reveal">
@@ -831,7 +701,7 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
       <div class="step reveal">
         <div class="step-num">2</div>
         <h3>افتح التطبيق</h3>
-        <p>حمّل التطبيق المجاني واربطه بالبلوتوث مع الجهاز.</p>
+        <p>حمّل التطبيق المجاني واربطه بالبلوتوث 4.0 مع الجهاز.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">3</div>
@@ -842,28 +712,27 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   </div>
 </section>
 
-<!-- ═══ المواصفات ═══ -->
 <section class="specs" id="specs">
   <div class="container">
     <div class="sec-head reveal">
       <span class="sec-tag">المواصفات</span>
       <h2>تفاصيل الجهاز</h2>
-      <p>جهاز Vgate iCar Pro OBD-II أصلي — موثوقية مختبرة عالميًا.</p>
+      <p>جهاز KONNWEI KW902 أصلي — موثوقية مختبرة عالميًا.</p>
     </div>
     <div class="specs-grid">
       <ul class="spec-list reveal">
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> دعم كامل لبروتوكولات OBD-II العشرة</li>
-        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> اكتشاف أكثر من 9530 كود عطل</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> اكتشاف أكثر من 9500 كود عطل</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> متوافق مع السيارات من 1996 حتى 2025</li>
-        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> اتصال Bluetooth مع Android و iOS</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> اتصال Bluetooth 4.0 مع Android و iOS</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> قراءة بيانات VIN ورقم الهيكل</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> بنزين / ديزل / جميع الماركات</li>
       </ul>
       <div class="spec-box reveal">
         <h3>بطاقة الجهاز</h3>
-        <div class="spec-row"><span>الموديل</span><span>Vgate iCar Pro</span></div>
-        <div class="spec-row"><span>الواجهة</span><span>OBD-II Bluetooth</span></div>
-        <div class="spec-row"><span>الأعطال المدعومة</span><span>+9530 كود</span></div>
+        <div class="spec-row"><span>الموديل</span><span>KONNWEI KW902</span></div>
+        <div class="spec-row"><span>الواجهة</span><span>OBD-II Bluetooth 4.0</span></div>
+        <div class="spec-row"><span>الأعطال المدعومة</span><span>+9500 كود</span></div>
         <div class="spec-row"><span>التوافق</span><span>Android / iOS</span></div>
         <div class="spec-row"><span>الطاقة</span><span>من منفذ OBD-II</span></div>
         <div class="spec-row"><span>العلبة</span><span>جهاز + دليل + تطبيق</span></div>
@@ -872,7 +741,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   </div>
 </section>
 
-<!-- ═══ الضمان ═══ -->
 <section class="warranty" id="warranty">
   <div class="container">
     <div class="sec-head reveal">
@@ -880,28 +748,19 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
       <h2>تسوّق بثقة تامة</h2>
       <p>حقوقك مضمونة بنسبة 100% — لا مخاطر على شرائك.</p>
     </div>
-
     <div class="warranty-grid">
       <div class="warranty-card reveal">
-        <div class="warranty-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-        </div>
+        <div class="warranty-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
         <h3>ضمان سنة كاملة</h3>
         <p>الجهاز مضمون ضد عيوب الصناعة لمدة 12 شهرًا. في حال أي خلل، نستبدله مجانًا.</p>
       </div>
-
       <div class="warranty-card reveal">
-        <div class="warranty-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M12 8v4l3 2"/></svg>
-        </div>
+        <div class="warranty-icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M12 8v4l3 2"/></svg></div>
         <h3>فحص الجهاز قبل الدفع</h3>
         <p>عند استلامك للجهاز، يمكنك فحصه والتأكد منه قبل الدفع. الدفع فقط بعد رضاك.</p>
       </div>
-
       <div class="warranty-card reveal">
-        <div class="warranty-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 12c0 5-9 9-9 9s-9-4-9-9V5l9-3 9 3z"/><path d="m9 11 3 3 6-6"/></svg>
-        </div>
+        <div class="warranty-icon"><svg viewBox="0 0 24 24"><path d="M21 12c0 5-9 9-9 9s-9-4-9-9V5l9-3 9 3z"/><path d="m9 11 3 3 6-6"/></svg></div>
         <h3>استرجاع خلال 7 أيام</h3>
         <p>إذا لم يعجبك الجهاز، يمكنك إرجاعه خلال 7 أيام من الاستلام واسترداد المبلغ كاملاً.</p>
       </div>
@@ -909,15 +768,13 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   </div>
 </section>
 
-<!-- ═══ آراء العملاء ═══ -->
 <section class="reviews" id="reviews">
   <div class="container">
     <div class="sec-head reveal">
       <span class="sec-tag">آراء العملاء</span>
       <h2>ماذا يقول مستخدمونا؟</h2>
-      <p>أكثر من 12,000 عميل استخدموا Diga Scanner لتشخيص سياراتهم.</p>
+      <p>أكثر من 12,000 عميل استخدموا Diga Scanner Pro لتشخيص سياراتهم.</p>
     </div>
-
     <div class="rev-grid">
       <div class="rev reveal">
         <div class="stars">★★★★★</div>
@@ -927,7 +784,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
           <div><b>أحمد بن عمار</b><span>الجزائر العاصمة</span></div>
         </div>
       </div>
-
       <div class="rev reveal">
         <div class="stars">★★★★★</div>
         <p>"استعملته لفحص سيارة قبل شرائها، وطلع فيها عطل في ناقل الحركة كان مخفي. أنقذني من خسارة كبيرة."</p>
@@ -936,7 +792,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
           <div><b>سفيان مرابط</b><span>وهران</span></div>
         </div>
       </div>
-
       <div class="rev reveal">
         <div class="stars">★★★★★</div>
         <p>"أنا ميكانيكي، وأستعمله يوميًا في الورشة. سريع ودقيق ويكشف أعطال ما كان يكتشفها جهازي القديم."</p>
@@ -949,7 +804,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   </div>
 </section>
 
-<!-- ═══ السعر ═══ -->
 <section id="pricing">
   <div class="container">
     <div class="sec-head reveal">
@@ -957,29 +811,24 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
       <h2>سعر واحد شامل كل شيء</h2>
       <p>بدون باقات معقدة — سعر واضح وتوصيل مجاني.</p>
     </div>
-
     <div class="price-card reveal">
       <div class="price-tag">عرض خاص</div>
       <h3>Diga Scanner Pro</h3>
-      <p class="desc">جهاز Vgate iCar Pro OBD-II — يكشف +9530 عطل</p>
-
+      <p class="desc">جهاز KONNWEI KW902 OBD-II — يكشف +9500 عطل</p>
       <div class="price-amount">
         <span class="num">13,900</span>
         <span class="cur">دج</span>
       </div>
       <div class="price-old">17,500 دج</div>
-
       <ul class="price-feats">
-        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> جهاز Vgate iCar Pro أصلي</li>
-        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> دعم +9530 كود عطل</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> جهاز KONNWEI KW902 أصلي</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> دعم +9500 كود عطل</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> تطبيق للهاتف مجانًا</li>
-        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> دليل استخدام بالعربية</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> واجهة عربية احترافية</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> ضمان سنة كاملة</li>
         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> دعم فني عبر واتساب</li>
       </ul>
-
       <a href="#order" class="btn btn-accent">🛒 اطلب الآن</a>
-
       <div class="price-note">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         الدفع عند الاستلام — توصيل مجاني لكل الولايات
@@ -988,40 +837,33 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   </div>
 </section>
 
-<!-- ═══ FAQ ═══ -->
 <section id="faq" style="background:var(--bg-2)">
   <div class="container">
     <div class="sec-head reveal">
       <span class="sec-tag">الأسئلة الشائعة</span>
       <h2>عندك سؤال؟ عندنا الجواب</h2>
     </div>
-
     <div class="faq-wrap">
       <details class="reveal" open>
         <summary>هل يعمل مع جميع أنواع السيارات؟</summary>
         <p>نعم، الجهاز متوافق مع جميع السيارات التي تحتوي على منفذ OBD-II، أي السيارات المصنّعة من سنة 1996 وما بعدها، بنزين أو ديزل، وجميع الماركات الأوروبية والآسيوية والأمريكية.</p>
       </details>
-
       <details class="reveal">
         <summary>هل يحتاج إلى شحن أو بطارية؟</summary>
         <p>لا، الجهاز يعمل مباشرة من منفذ OBD-II في السيارة. لا يحتاج شحن ولا بطاريات خارجية.</p>
       </details>
-
       <details class="reveal">
         <summary>هل أحتاج هاتف؟</summary>
-        <p>نعم، يتصل الجهاز بهاتفك عبر Bluetooth باستخدام تطبيق مجاني (Android أو iOS) لعرض النتائج بالتفصيل.</p>
+        <p>نعم، يتصل الجهاز بهاتفك عبر Bluetooth 4.0 باستخدام تطبيق مجاني (Android أو iOS) بواجهة عربية لعرض النتائج بالتفصيل.</p>
       </details>
-
       <details class="reveal">
         <summary>كيف تتم عملية الدفع والتوصيل؟</summary>
         <p>نعتمد الدفع عند الاستلام. تدفع فقط عندما يصل الجهاز إلى يدك وتتأكد منه. التوصيل مجاني ويستغرق من 2 إلى 5 أيام عمل.</p>
       </details>
-
       <details class="reveal">
         <summary>هل يوجد ضمان على الجهاز؟</summary>
         <p>نعم، الجهاز يأتي مع ضمان سنة كاملة يغطي عيوب الصناعة. كما يمكنك فحص الجهاز قبل الدفع، ولديك 7 أيام لإرجاعه في حال عدم الرضا.</p>
       </details>
-
       <details class="reveal">
         <summary>هل يمكنني استرجاع المبلغ إذا لم يعجبني؟</summary>
         <p>نعم، لديك 7 أيام من تاريخ الاستلام لإرجاع الجهاز واسترداد المبلغ كاملاً، بشرط أن يكون بحالته الأصلية مع كامل الملحقات.</p>
@@ -1030,7 +872,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
   </div>
 </section>
 
-<!-- ═══ نموذج الطلب ═══ -->
 <section class="order" id="order">
   <div class="container">
     <div class="sec-head reveal">
@@ -1038,7 +879,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
       <h2>املأ البيانات وسنتصل بك</h2>
       <p>التوصيل مجاني لجميع الولايات — الدفع عند الاستلام.</p>
     </div>
-
     <div class="order-box reveal">
       <form id="orderForm" novalidate>
         <div class="form-row">
@@ -1059,7 +899,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
             </div>
           </div>
         </div>
-
         <div class="form-row">
           <div class="field">
             <label for="wilaya">الولاية <span class="req">*</span></label>
@@ -1138,7 +977,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
             </select>
           </div>
         </div>
-
         <div class="field">
           <label>طريقة التوصيل <span class="req">*</span></label>
           <div class="delivery-options">
@@ -1160,44 +998,26 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
             </div>
           </div>
         </div>
-
-        <!-- ملخص الطلب مع السعر الإجمالي -->
         <div class="order-summary">
-          <div class="summary-row">
-            <span>سعر الجهاز الواحد</span>
-            <span>13,900 دج</span>
-          </div>
-          <div class="summary-row">
-            <span>الكمية</span>
-            <span id="summaryQty">1</span>
-          </div>
-          <div class="summary-row">
-            <span>التوصيل</span>
-            <span style="color:var(--green);font-weight:700">مجاني</span>
-          </div>
-          <div class="summary-row total">
-            <span>المجموع الكلي</span>
-            <span id="summaryTotal">13,900 دج</span>
-          </div>
+          <div class="summary-row"><span>سعر الجهاز الواحد</span><span>13,900 دج</span></div>
+          <div class="summary-row"><span>الكمية</span><span id="summaryQty">1</span></div>
+          <div class="summary-row"><span>التوصيل</span><span style="color:var(--green);font-weight:700">مجاني</span></div>
+          <div class="summary-row total"><span>المجموع الكلي</span><span id="summaryTotal">13,900 دج</span></div>
         </div>
-
         <div class="field">
           <label for="note">ملاحظات إضافية (اختياري)</label>
           <textarea id="note" placeholder="العنوان بالتفصيل، أو أي استفسار..."></textarea>
         </div>
-
         <button type="submit" class="btn btn-accent" id="submitBtn">
           <span class="btn-loader"></span>
           <span class="btn-text">📱 إرسال الطلب عبر واتساب</span>
         </button>
-
         <p class="form-note">معلوماتك محفوظة ولن تُستخدم إلا للتواصل بشأن طلبك</p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ═══ الفوتر ═══ -->
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -1208,9 +1028,8 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
           </div>
           Diga <span>Scanner</span>
         </a>
-        <p>جهاز Vgate iCar Pro OBD-II الأصلي. اكتشف أعطال سيارتك بنفسك ووفّر المال والوقت.</p>
+        <p>جهاز KONNWEI KW902 OBD-II الأصلي. اكتشف أعطال سيارتك بنفسك ووفّر المال والوقت.</p>
       </div>
-
       <div>
         <h4>التنقل</h4>
         <ul class="foot-links">
@@ -1220,7 +1039,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
           <li><a href="#warranty">الضمان</a></li>
         </ul>
       </div>
-
       <div>
         <h4>معلومات</h4>
         <ul class="foot-links">
@@ -1229,7 +1047,6 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
           <li><a href="#order">اطلب الآن</a></li>
         </ul>
       </div>
-
       <div>
         <h4>تواصل معنا</h4>
         <ul class="foot-contact">
@@ -1248,19 +1065,14 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
         </ul>
       </div>
     </div>
-
-    <div class="copyright">
-      © <span id="year"></span> <b>Diga Digital</b> — جميع الحقوق محفوظة.
-    </div>
+    <div class="copyright">© <span id="year"></span> <b>Diga Digital</b> — جميع الحقوق محفوظة.</div>
   </div>
 </footer>
 
-<!-- ═══ زر واتساب عائم ═══ -->
 <a href="https://wa.me/213696799945" class="float-wa" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.8-1.9-.9-.3-.1-.5-.2-.7.1s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.2-.2-.5-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
 </a>
 
-<!-- ═══ زر طلب ثابت في الموبايل ═══ -->
 <div class="mobile-cta">
   <div class="mobile-cta-inner">
     <div class="mobile-cta-price">
@@ -1272,52 +1084,9 @@ footer h4{color:#fff;font-size:.96rem;font-weight:800;margin-bottom:20px}
 </div>
 
 <script>
-/* ═══════════════════════════════════════════
-   الإعدادات
-   ═══════════════════════════════════════════ */
 const WA_NUMBER = "213696799945";
+const SHEETS_WEBHOOK_URL = "";
 
-/* ─────────────────────────────────────────────
-   [اختياري] ربط Google Sheets لحفظ الطلبات
-   ─────────────────────────────────────────────
-   عند تفعيله، سيتم حفظ كل طلب في جدول Google
-   قبل إرساله على واتساب — حتى لا يضيع أي زبون.
-
-   طريقة الإعداد (5 دقائق):
-   1. اذهب إلى: https://sheets.new
-   2. أنشئ جدولاً جديداً
-   3. من القائمة: Extensions → Apps Script
-   4. الصق الكود التالي:
-
-   function doPost(e) {
-     const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-     const data = JSON.parse(e.postData.contents);
-     sheet.appendRow([
-       new Date(),
-       data.name,
-       data.phone,
-       data.wilaya,
-       data.qty,
-       data.delivery,
-       data.total,
-       data.note
-     ]);
-     return ContentService.createTextOutput(JSON.stringify({ok: true}))
-       .setMimeType(ContentService.MimeType.JSON);
-   }
-
-   5. اضغط Deploy → New deployment
-   6. اختر: Web app
-   7. Execute as: Me
-   8. Who has access: Anyone
-   9. اضغط Deploy وانسخ الـ URL
-   10. الصق الـ URL في المتغير أدناه ⬇
-   ───────────────────────────────────────────── */
-const SHEETS_WEBHOOK_URL = ""; // ← ضع رابط Google Apps Script هنا
-
-/* ═══════════════════════════════════════════
-   قائمة الموبايل
-   ═══════════════════════════════════════════ */
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
 burger.addEventListener('click', () => {
@@ -1329,14 +1098,15 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   navLinks.classList.remove('open');
 }));
 
-/* ═══════════════════════════════════════════
-   السنة في الفوتر
-   ═══════════════════════════════════════════ */
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* ═══════════════════════════════════════════
-   حساب السعر الإجمالي
-   ═══════════════════════════════════════════ */
+/* تبديل الصور */
+function changeImage(src, thumbEl){
+  document.getElementById('mainImage').src = src;
+  document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+  thumbEl.classList.add('active');
+}
+
 const PRICE_PER_UNIT = 13900;
 const qtySelect = document.getElementById('qty');
 const summaryQty = document.getElementById('summaryQty');
@@ -1351,27 +1121,18 @@ function updateTotal(){
 qtySelect.addEventListener('change', updateTotal);
 updateTotal();
 
-/* ═══════════════════════════════════════════
-   التحقق من رقم الهاتف (05 / 06 / 07)
-   ═══════════════════════════════════════════ */
 const phoneInput = document.getElementById('phone');
 phoneInput.addEventListener('input', (e) => {
   e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
 });
 
-function isValidPhone(phone){
-  return /^0[567][0-9]{8}$/.test(phone);
-}
+function isValidPhone(phone){ return /^0[567][0-9]{8}$/.test(phone); }
 
-/* ═══════════════════════════════════════════
-   التحقق من الحقول وعرض رسائل الخطأ
-   ═══════════════════════════════════════════ */
 function setError(fieldId, hasError){
   const field = document.getElementById(fieldId).closest('.field');
   if(hasError) field.classList.add('error');
   else field.classList.remove('error');
 }
-
 ['name','phone','wilaya'].forEach(id => {
   document.getElementById(id).addEventListener('input', () => setError(id, false));
   document.getElementById(id).addEventListener('change', () => setError(id, false));
@@ -1379,77 +1140,53 @@ function setError(fieldId, hasError){
 
 function validateForm(){
   let valid = true;
-
   const name = document.getElementById('name').value.trim();
   if(name.length < 3){ setError('name', true); valid = false; }
-
   const phone = document.getElementById('phone').value.trim();
   if(!isValidPhone(phone)){ setError('phone', true); valid = false; }
-
   const wilaya = document.getElementById('wilaya').value;
   if(!wilaya){ setError('wilaya', true); valid = false; }
-
   return valid;
 }
 
-/* ═══════════════════════════════════════════
-   حفظ الطلب في Google Sheets (اختياري)
-   ═══════════════════════════════════════════ */
 async function saveToSheets(data){
-  if(!SHEETS_WEBHOOK_URL) return; // إذا لم يتم الإعداد، تجاهل
+  if(!SHEETS_WEBHOOK_URL) return;
   try {
     await fetch(SHEETS_WEBHOOK_URL, {
-      method: 'POST',
-      mode: 'no-cors',
+      method: 'POST', mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
-  } catch(err){
-    console.warn('فشل حفظ الطلب في Google Sheets:', err);
-  }
+  } catch(err){ console.warn('Sheets error:', err); }
 }
 
-/* ═══════════════════════════════════════════
-   إرسال الطلب
-   ═══════════════════════════════════════════ */
 const form = document.getElementById('orderForm');
 const submitBtn = document.getElementById('submitBtn');
 let isSubmitting = false;
 
 form.addEventListener('submit', async function(e){
   e.preventDefault();
-
-  if(isSubmitting) return; // منع الإرسال المزدوج
+  if(isSubmitting) return;
   if(!validateForm()) return;
 
   isSubmitting = true;
   submitBtn.disabled = true;
   submitBtn.classList.add('loading');
 
-  const name     = document.getElementById('name').value.trim();
-  const phone    = document.getElementById('phone').value.trim();
-  const wilaya   = document.getElementById('wilaya').value;
-  const qty      = qtySelect.value;
-  const qtyText  = qty + (qty === '1' ? ' جهاز' : ' أجهزة');
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const wilaya = document.getElementById('wilaya').value;
+  const qty = qtySelect.value;
+  const qtyText = qty + (qty === '1' ? ' جهاز' : ' أجهزة');
   const delivery = document.querySelector('input[name="delivery"]:checked').value;
-  const note     = document.getElementById('note').value.trim();
-  const total    = (PRICE_PER_UNIT * parseInt(qty)).toLocaleString('en-US') + ' دج';
+  const note = document.getElementById('note').value.trim();
+  const total = (PRICE_PER_UNIT * parseInt(qty)).toLocaleString('en-US') + ' دج';
 
-  const orderData = {
-    name, phone, wilaya,
-    qty: qtyText,
-    delivery,
-    total,
-    note,
-    date: new Date().toLocaleString('ar-DZ')
-  };
-
-  // حفظ في Google Sheets (إن كان مفعّلاً)
+  const orderData = { name, phone, wilaya, qty: qtyText, delivery, total, note, date: new Date().toLocaleString('ar-DZ') };
   await saveToSheets(orderData);
 
-  // بناء رسالة واتساب
   let msg = "السلام عليكم 👋\n";
-  msg += "أريد طلب *Diga Scanner* (Vgate iCar Pro)\n\n";
+  msg += "أريد طلب *Diga Scanner Pro* (KONNWEI KW902)\n\n";
   msg += "👤 الاسم: " + name + "\n";
   msg += "📞 الهاتف: " + phone + "\n";
   msg += "📍 الولاية: " + wilaya + "\n";
@@ -1461,28 +1198,18 @@ form.addEventListener('submit', async function(e){
 
   const waUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
 
-  // إعادة تعيين زر الإرسال
   setTimeout(() => {
     isSubmitting = false;
     submitBtn.disabled = false;
     submitBtn.classList.remove('loading');
   }, 2000);
 
-  // فتح واتساب (طريقة تعمل على iPhone و Android)
   try {
     const win = window.open(waUrl, '_blank');
-    if(!win || win.closed || typeof win.closed === 'undefined'){
-      // فشل الفتح → استخدام location.href
-      window.location.href = waUrl;
-    }
-  } catch(err){
-    window.location.href = waUrl;
-  }
+    if(!win || win.closed || typeof win.closed === 'undefined'){ window.location.href = waUrl; }
+  } catch(err){ window.location.href = waUrl; }
 });
 
-/* ═══════════════════════════════════════════
-   حركات الظهور
-   ═══════════════════════════════════════════ */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if(entry.isIntersecting){
@@ -1491,7 +1218,6 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: .1, rootMargin: '0px 0px -50px 0px' });
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
