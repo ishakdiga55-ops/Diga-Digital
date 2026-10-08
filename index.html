@@ -826,12 +826,46 @@
         qtySelect.addEventListener('change', updateTotal);
         updateTotal();
 
-        // 4. منع الإرسال الافتراضي (للعرض فقط - قم بربطه بواجهة برمجية لاحقاً)
+        // 4. إرسال الطلب إلى واتساب
         document.getElementById('orderForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('تم استلام طلبك بنجاح! سنتواصل معك قريباً لتأكيد الطلب.');
+            e.preventDefault(); // منع إعادة تحميل الصفحة
+
+            // جمع بيانات النموذج
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const wilaya = document.getElementById('wilaya').value;
+            const qty = document.getElementById('qty').value;
+            const note = document.getElementById('note').value.trim();
+            const total = document.getElementById('summaryTotal').textContent;
+
+            // التحقق من صحة البيانات
+            if (name === "" || phone === "" || wilaya === "") {
+                alert("الرجاء ملء جميع الحقول المطلوبة (الاسم، الهاتف، الولاية).");
+                return;
+            }
+
+            // تجهيز رسالة الواتساب
+            let message = "السلام عليكم، أريد طلب جهاز Diga Scanner Pro:\n\n";
+            message += "👤 الاسم: " + name + "\n";
+            message += "📞 الهاتف: " + phone + "\n";
+            message += "📍 الولاية: " + wilaya + "\n";
+            message += "📦 الكمية: " + qty + " جهاز\n";
+            message += "💰 الإجمالي: " + total + "\n";
+            if (note !== "") {
+                message += "📝 ملاحظات: " + note + "\n";
+            }
+            message += "\nشكراً لكم.";
+
+            // فتح رابط واتساب
+            const whatsappNumber = "213696799945"; // رقم الواتساب الخاص بك
+            const whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+            
+            window.open(whatsappUrl, '_blank');
+
+            // إظهار رسالة تأكيد وإعادة تعيين النموذج
+            alert('تم تجهيز طلبك! سيتم تحويلك إلى واتساب لإتمام الطلب.');
             this.reset();
-            updateTotal(); // إعادة تعيين الإجمالي
+            updateTotal();
         });
     </script>
 </body>
